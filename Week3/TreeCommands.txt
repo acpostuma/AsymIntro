@@ -1,0 +1,26 @@
+There's a bit of nuance to how to draw a branch from a tree
+You likely want to play with this live in a root session first
+Then write a macro for this only once you know what task you want to do
+
+tree->Print(); //this shows what branches are in the tree
+
+tree->Draw("branch"); //draw a histogram of a branch from a tree
+eg: Cut_Pion_Events_Prompt_Pos->Draw("P_hgcer_npeSum");
+eg2: CDATA->Draw("q_energy");
+
+tree->Draw("branch>>h1"); //draw the branch into a histogram named h1
+
+tree->Draw("branch1:branch2"); //draw a 2D histogram comparing two tree branches
+
+//draw two different branches on top of each other:
+tree->Draw("branch1");
+tree->Draw("branch1","","same");
+
+//draw a branch but only for events with a condition satisfied
+tree->Draw("branch1","branch2>0");
+
+//control what the axis limits of the drawn histogram will be
+tree->Draw("branch1>>h1(100,0,1)");
+
+//using all 3 arguments: colz is a nice drawing option
+tree->Draw("branch1:branch2","branch3>4","colz");

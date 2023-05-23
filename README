@@ -1,0 +1,12 @@
+Welcome!
+
+This is Alicia's compilation of all files sent to Portia for learning ROOT, Hall C, etc.
+Files are split up into steps labelled by week, with the focus each week being:
+
+1. Intro to ROOT - macro structure, running from terminal, very basic macros
+2. Data in ROOT - manipulating graphs, histograms, and functions
+3. Intro to TTrees - how to create a TTree and how to read data from a TTree
+4. KaonLT data - manipulating our specific data set
+
+I will continue to update as we progress during the summer.
+Files may be added by Ali or Portia as well.

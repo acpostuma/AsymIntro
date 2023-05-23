@@ -1,0 +1,54 @@
+Our data is stored in a rather large TTree.
+
+Some important branches and what they mean:
+
+
+--- HMS ---
+
+H_gtr_beta ("HMS good track beta"): speed of the particle v/c in the HMS. For an electron, we expect this to be close to 1.
+
+H_cal_etottracknorm ("HMS calorimenter total energy track normalized"): momentum/energy in the HMS calorimenter. Again, for an electron, this should be close to 1.
+
+H_cer_npeSum ("HMS number of photoelectrons sum"): the number of photoelectrons measured in the HMS Cerenkov. For an electron this should be more than 1.
+
+
+---- SHMS ----
+
+
+P_gtr_beta ("SHMS good track beta"): speed of the particle v/c in the SHMS. For a meson, e.g. pion or kaon we expect this to be still close to 1, but with more spread than for an electron.
+
+P_cal_etottracknorm ("SHMS calorimeter total energy track normalized"): momentum/energy in the SHMS calorimeter. For a meson we expect around less than 1, with a distribution peaking above 0.5.
+
+P_aero_npeSum ("SHMS aerogel number of photoelectrons sum"): number of photoelectrons measured in the SHMS aerogel Cerenkov. We expect more than 1 for both pions and kaons, but none for protons.
+
+P_hgcer_npeSum ("SHMS heavy gas cerenkov number of photoelectrons sum"): number of photoelectrons measured in the SHMS heavy gas Cerenkov. We expect more than 1 for pions, but none for protons or kaons.
+
+
+---- Kinematics ----
+
+Q2: virtual photon 4-momentum squared. One of the variables we use to distinguish settings, should be close to what is provided in the file name
+
+W: center of mass energy. One of the variables we use to distinguish settings, should be close to what is provided in the file name
+
+MandelT: 4-momentum transfer to the produced meson, the Mandelstam variable t. We will be dividing our data into bins in -t and seeing how the asymmetry varies with t. 
+
+
+----- Misc -----
+
+epsilon: the ratio of virtual photons with longitudinal vs transverse polarization. This is especially important to the "LT separations" that most of the lab are working on, but the variable does appear in asymmetry analysis as well.
+
+CTime_ePiCoinTime_ROC1: the time between signals in the HMS and SHMS. For a proper coincidence "prompt" event this should be between -2 and 2. Part of our later analysis will be to subtract "random" data from "prompt" events.
+
+MMpi: missing mass in GeV of each event. This should tell us the mass of the third particle involved in the reaction, and so we compare with the masses of neutrons, deltas, lambdas, etc. Placing a cut on this is very important to isolating the reaction of interest.
+
+T_helicity_hel: the helicity +/-1 of the incident electron in each event. This is not important except for asymmetry analysis, where we split up our data into positive and negative data sets.
+
+
+------ Tasks -------
+
+Use the plotting tricks in TreeCommands.txt when needed.
+1. What shape does it make when you plot Q2 vs W?
+2. Can you find another pair of variables which have a clear relationship between them?
+3. Given the information above, what sort of cuts might we apply to ensure we are seeing an electron in the HMS and a pion in the SHMS?
+4. Explore relationships between variables by plotting one variable with a cut on another, similar to TestCut.C (this can be done interactively as well by giving similar commands one at a time in root)
+

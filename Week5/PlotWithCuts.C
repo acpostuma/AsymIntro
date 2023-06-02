@@ -11,7 +11,7 @@ void PlotWithCuts(){
 	TFile *datafile = new TFile("Q3W2p32center_cointime_pos.root");
 	TFile *simcfile = new TFile("Prod_Delta_Q3p0W2p32center_highe.root");
 	//then get trees from the files
-	TTree *data = (TTree*)datafile->Get("Cut_Pion_Events_Prompt_Pos");
+	TTree *data = (TTree*)datafile->Get("Cut_Pion_Events_All_Pos");
 	TTree *simc = (TTree*)simcfile->Get("h10");
 
 	//create a TCut object to hold all of our data cuts

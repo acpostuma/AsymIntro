@@ -1,0 +1,28 @@
+I have some new data files on lark
+These are in a folder called nobackup since they are a little large
+Use the "scp" command to copy these files to somewhere that you can use them
+(Basic syntax is "scp path_to_file destination")
+
+Then you should have all the Q2=3, W=2.32 data:
+Left, right, and center, positive and negative
+
+Tasks:
+
+1. Check that your PID cuts seem to make sense for the left and right data sets as well
+2. Run the asymmetry calculation for the left and right data sets
+3. Use the script "WeightAvg.C" to take a weighted average of left, right, and center data
+4. Choose some -t bins: instructions below
+
+This should be more than enough to keep you busy until I get back.
+If you don't start any of it until after the conference, that is just fine!
+But I want to leave you with something so you don't get bored :)
+
+
+Choosing -t bins:
+1. Plot the -t distribution (tree branch "MandelT")
+2. Plot all 3 -t distributions on the same plot (left, right, and center)
+3. Create a histogram that sums the left, right, and center data
+   Hint: see "FirstAsym.C" for how I add and subtract histograms
+4. Try to divide into 3 or 4 bins with the same number of events
+   Hint: h1->Integral(0,100) returns the number of events in 
+   histogram h1 in bins 0 through 100
